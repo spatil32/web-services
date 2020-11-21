@@ -47,15 +47,15 @@ class App extends React.Component {
     window.removeEventListener("resize", this.updateWidth.bind(this));
   }
 
-  toggle = () => {
+  handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
 
   render() {
     return (
       <div className="App wrapper">
-        <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
-        <Content toggle={this.toggle} isOpen={this.state.isOpen} />
+        <SideBar onToggle={this.handleToggle} isOpen={this.state.isOpen} />
+        <Content onToggle={this.handleToggle} isOpen={this.state.isOpen} />
       </div>
     );
   }

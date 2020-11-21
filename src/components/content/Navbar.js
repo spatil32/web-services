@@ -6,6 +6,7 @@ import { Navbar, Button, Nav } from "react-bootstrap";
 class NavBar extends React.Component {
   render() {
     return (
+      <>
       <Navbar
         bg="light"
         className="navbar shadow-sm p-3 mb-5 bg-white rounded"
@@ -24,6 +25,7 @@ class NavBar extends React.Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      </>
     );
   }
 }
