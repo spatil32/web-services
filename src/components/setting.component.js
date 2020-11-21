@@ -208,11 +208,91 @@ export default class Tutorial extends Component {
               </Accordion>
               <Accordion defaultActiveKey="0">
               <Card>
-                <Card.Img variant="top" src="zendesk.webp" />
+                <Card.Img variant="top" src="zendesk.png" />
                 <Card.Body>
                   <Card.Title>Zendesk</Card.Title>
                   <Card.Text>
                     Zendesk Credentials here.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                    </Card.Footer>
+                     <Accordion.Collapse eventKey="0">
+                      <Card.Body>
+                        <Form>
+                          <Form.Group controlId="accountsid">
+                            <Form.Label>Account Sid</Form.Label>
+                            <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="authcredential">
+                            <Form.Label>Auth Credential</Form.Label>
+                            <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Button variant="primary" type="submit">
+                            Submit
+                          </Button>
+                        </Form>
+                      </Card.Body>
+                  </Accordion.Collapse>
+              </Card>
+              </Accordion>
+              <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Img variant="top" src="asana.png" />
+                <Card.Body>
+                  <Card.Title>Asana</Card.Title>
+                  <Card.Text>
+                    Asana Credentials here.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                    </Card.Footer>
+                     <Accordion.Collapse eventKey="0">
+                      <Card.Body>
+                        <Form>
+                          <Form.Group controlId="accountsid">
+                            <Form.Label>Account Sid</Form.Label>
+                            <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="authcredential">
+                            <Form.Label>Auth Credential</Form.Label>
+                            <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Button variant="primary" type="submit">
+                            Submit
+                          </Button>
+                        </Form>
+                      </Card.Body>
+                  </Accordion.Collapse>
+              </Card>
+              </Accordion>
+              <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Img variant="top" src="onenote.png" />
+                <Card.Body>
+                  <Card.Title>One Note</Card.Title>
+                  <Card.Text>
+                    One Note Credentials here.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
