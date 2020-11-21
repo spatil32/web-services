@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import {Container, Card, Button, CardDeck, Accordion, Form} from 'react-bootstrap';
 import AccountDataService from "../services/account.service";
 
 export default class Tutorial extends Component {
@@ -88,23 +85,168 @@ export default class Tutorial extends Component {
     return (
       <div>
         <Container>
-          <Row>
-            <Col xs={10} md={8}>
-              <Image src="box.png" roundedCircle />
-            </Col>
-            <Col xs={10} md={8}>
-              <Image src="dropbox.png" roundedCircle />
-            </Col>
-            <Col xs={10} md={8}>
-              <Image src="google-drive.png" roundedCircle />
-            </Col>
-            <Col xs={10} md={8}>
-              <Image src="atlassian.png" roundedCircle />
-            </Col>
-            <Col xs={10} md={8}>
-              <Image src="zendesk.webp" roundedCircle />
-            </Col>
-          </Row>
+         <CardDeck>
+             <Accordion defaultActiveKey="0">
+                <Card>
+                  <Card.Img variant="top" src="box.png" />
+                  <Card.Body>
+                    <Card.Title>Box</Card.Title>
+                    <Card.Text>
+                      Enter credentials for box.
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                  </Card.Footer>
+                   <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      <Form>
+                        <Form.Group controlId="accountsid">
+                          <Form.Label>Account Sid</Form.Label>
+                          <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                          <Form.Text className="text-muted">
+                            We'll save crdentials in secret bucket.
+                          </Form.Text>
+                        </Form.Group>
+                        <Form.Group controlId="authcredential">
+                          <Form.Label>Auth Credential</Form.Label>
+                          <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                          <Form.Text className="text-muted">
+                            We'll save crdentials in secret bucket.
+                          </Form.Text>
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                          Submit
+                        </Button>
+                      </Form>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                 </Card>
+             </Accordion>
+             <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Img variant="top" src="dropbox.png" />
+                <Card.Body>
+                  <Card.Title>Dropbox</Card.Title>
+                  <Card.Text>
+                    Enter credentials for DropBox.
+                  </Card.Text>
+                </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                    </Card.Footer>
+                     <Accordion.Collapse eventKey="0">
+                      <Card.Body>
+                        <Form>
+                          <Form.Group controlId="accountsid">
+                            <Form.Label>Account Sid</Form.Label>
+                            <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="authcredential">
+                            <Form.Label>Auth Credential</Form.Label>
+                            <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Button variant="primary" type="submit">
+                            Submit
+                          </Button>
+                        </Form>
+                      </Card.Body>
+                  </Accordion.Collapse>
+              </Card>
+              </Accordion>
+              <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Img variant="top" src="google-drive.png" />
+                <Card.Body>
+                  <Card.Title>Google Drive</Card.Title>
+                  <Card.Text>
+                    Google Drive Credentials here.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                    </Card.Footer>
+                     <Accordion.Collapse eventKey="0">
+                      <Card.Body>
+                        <Form>
+                          <Form.Group controlId="accountsid">
+                            <Form.Label>Account Sid</Form.Label>
+                            <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="authcredential">
+                            <Form.Label>Auth Credential</Form.Label>
+                            <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Button variant="primary" type="submit">
+                            Submit
+                          </Button>
+                        </Form>
+                      </Card.Body>
+                  </Accordion.Collapse>
+              </Card>
+              </Accordion>
+              <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Img variant="top" src="zendesk.webp" />
+                <Card.Body>
+                  <Card.Title>Zendesk</Card.Title>
+                  <Card.Text>
+                    Zendesk Credentials here.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        Enter Credentials!
+                    </Accordion.Toggle>
+                    </Card.Footer>
+                     <Accordion.Collapse eventKey="0">
+                      <Card.Body>
+                        <Form>
+                          <Form.Group controlId="accountsid">
+                            <Form.Label>Account Sid</Form.Label>
+                            <Form.Control type="accountsid" placeholder="Enter Account Sid" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Form.Group controlId="authcredential">
+                            <Form.Label>Auth Credential</Form.Label>
+                            <Form.Control type="auth" placeholder="Enter Auth Credentials" />
+                            <Form.Text className="text-muted">
+                              We'll save crdentials in secret bucket.
+                            </Form.Text>
+                          </Form.Group>
+                          <Button variant="primary" type="submit">
+                            Submit
+                          </Button>
+                        </Form>
+                      </Card.Body>
+                  </Accordion.Collapse>
+              </Card>
+              </Accordion>
+        </CardDeck>
         </Container>
       </div>
     );
